@@ -97,21 +97,13 @@ const Weather = () => {
           <div className='d-flex  justify-content-between align-items-center gutter-0 gap-2 mb-2 '>
          
            {weeklyData.map((d,index) =>{
-            
-            if(index<5){
-             return(
-               <div className='row  ' >
-             
-                <p>{Days[index +1]}</p>
-                <p>{Math.round(d.temp.min)}°C</p>
-                <p>{Math.round(d.temp.max)}°C</p>
-               
-                
-  
-             
-             </div>
-             )
-            }
+            return(
+                <div>
+                    
+                    
+                </div>
+            )
+           
              }) }
   
  
