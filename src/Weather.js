@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import  { Search } from 'react-bootstrap-icons';
+import WeeklyForecast from './WeeklyForecast';
 
 
 const Weather = () => {
@@ -98,10 +99,11 @@ const Weather = () => {
          
            {weeklyData.map((d,index) =>{
             return(
-                <div>
+                
+                    <WeeklyForecast key={index}  index={index} minTemp={d.temp.min} maxTemp={d.temp.max}/>
                     
-                    
-                </div>
+                
+
             )
            
              }) }
@@ -113,7 +115,7 @@ const Weather = () => {
      </div>
      <div className='mx-auto' style={{width: "800px"}}>
       <p className='text-center'>
-      <a href='https://github.com/MYATSD' >Open Source Code</a> by Hsu Myat Sandi Aung
+      <a href='https://github.com/MYATSD/SheCodes-React-Week4-Challenge' >Open Source Code</a> by Hsu Myat Sandi Aung
 
       </p>
      </div>
